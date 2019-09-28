@@ -2,7 +2,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=analiz_db',
+    'dsn' => 'mysql:host=192.168.1.36;dbname=analiz_db',
     'username' => 'root',
     'password' => '',
     'charset' => 'utf8',

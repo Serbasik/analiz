@@ -31,7 +31,7 @@ function init() {
     // Добавим заливку цветом.
     var pane = new ymaps.pane.StaticPane(map, {
         zIndex: 100, css: {
-            width: '100%', height: '100%', backgroundColor: '#f7f7f7'
+            width: '100%', height: '100%', backgroundColor: '#ccc'
         }
     });
     map.panes.append('white', pane);
@@ -87,7 +87,7 @@ function updateData(newData) {
 
     regions.objects.each(function (feature) {
         console.log(feature);
-        feature.options.fillColor = "#343433";
+        feature.options.fillColor = newData;
     });
     map.geoObjects.remove();
     map.geoObjects.add(regions);

@@ -18,7 +18,7 @@
                     <div class="card-action">
                         <div style="text-align: center;">
                             <?php foreach ($god as $item):?>
-                                <a style="margin: 5px 10px 5px 0" class="waves-effect waves-light btn"><?= $item['id']?></a>
+                                <a style="margin: 5px 10px 5px 0" class="waves-effect waves-light btn" id="<?= $item['id']?>"><?= $item['id']?></a>
                             <?php endforeach;?>
                         </div>
                         <div id="map"></div>
@@ -30,6 +30,7 @@
                         <script>
                             $('.btn').on('click', function () {
                                 var year = ($(this).attr('id'));
+
                                 $.ajax({
                                     url: '/site/getdata',
                                     type: 'POST',
@@ -41,7 +42,7 @@
                                     success: function (res) {
                                         if (res && res != 0) {
                                            //alert ("op");
-                                            updateData(undefined);
+                                            updateData(res);
                                         }
 
                                     },

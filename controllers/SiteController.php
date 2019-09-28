@@ -77,13 +77,47 @@ class SiteController extends Controller
         {
             if (!empty($_POST['year']))
             {
+                    switch ($_POST['year'])
+                    {
+                        case 2010:
+                        return json_encode("#ffff12");
 
+                        case 2011:
+                            return json_encode("#ff1112");
+
+                        case 2012:
+                            return json_encode("#55ff12");
+
+                        case 2013:
+                            return json_encode("#f4ff1f");
+
+                        case 2014:
+                            return json_encode("#8ff712");
+
+                        case 2015:
+                            return json_encode("#afff12");
+
+                        case 2016:
+                            return json_encode("#ff4512");
+
+                        case 2017:
+                            return json_encode("#8ff992");
+
+                        case 2018:
+                            return json_encode("#536f12");
+
+                        case 2019:
+                            return json_encode("#ff5722");
+
+                        case 2020:
+                            return json_encode("#731f12");
+                    }
                 $data = Period::find()->asArray()->all();
-                return json_encode($data);
+                return json_encode($_POST);
             }
 
         }
-        return "{}";
+
     }
 
     public function actionGetdataByPeriod()
