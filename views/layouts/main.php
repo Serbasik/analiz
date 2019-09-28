@@ -67,7 +67,7 @@ AppAsset::register($this);
             </button>
             <a class="navbar-brand waves-effect waves-dark" href="index.html"><i class="large material-icons">insert_chart</i> <strong>Система</strong></a>
 
-            <div id="sideNav" href=""><i class="material-icons dp48">toc</i></div>
+            <div id="sideNav" class="closed" href=""><i class="material-icons dp48">toc</i></div>
         </div>
 
         <ul class="nav navbar-top-links navbar-right">
