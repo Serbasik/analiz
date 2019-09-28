@@ -251,7 +251,7 @@ AppAsset::register($this);
         </li>
     </ul>
     <!--/. NAV TOP  -->
-    <nav class="navbar-default navbar-side" role="navigation">
+    <nav class="navbar-default navbar-side" role="navigation" style="left: -260px;">
         <div class="sidebar-collapse">
             <ul class="nav" id="main-menu">
 

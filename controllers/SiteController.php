@@ -75,8 +75,13 @@ class SiteController extends Controller
     {
         if (Yii::$app->request->isAjax)
         {
-            $data = Period::find()->asArray()->all();
-            return json_encode($data);
+            if (!empty($_POST['year']))
+            {
+
+                $data = Period::find()->asArray()->all();
+                return json_encode($data);
+            }
+
         }
     }
 

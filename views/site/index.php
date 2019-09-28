@@ -1,4 +1,4 @@
-<div id="page-wrapper">
+<div id="page-wrapper" style="margin-left: 0px;">
     <div class="header">
         <h1 class="page-header">
             Добро пожаловать в систему анализа!
@@ -23,7 +23,7 @@
                                         <p>Описание проекта №1</p>
                                     </div>
                                     <div class="card-action">
-                                        <a href="#">Открыть</a>
+                                        <a href="/site/analiz1">Открыть</a>
                                         <a href="#">Удалить</a>
                                     </div>
                                 </div>
