@@ -28,17 +28,21 @@
 
                         <div class="clearBoth"><br></div>
                         <script>
+                            updateData(undefined);
                             $('.btn').on('click', function () {
 
                                 $.ajax({
                                     url: '/site/getdata',
                                     type: 'POST',
                                     dataType: 'json',
-                                    beforeSend: function(request) { return request.setRequestHeader('X-CSRF-Token', $("meta[name='csrf-token']").attr('content')); },
+                                    beforeSend: function(request) {
+                                        return request.setRequestHeader('X-CSRF-Token', $("meta[name='csrf-token']").attr('content'));
+                                    },
                                     success: function (res) {
+                                        console.log("SUUU")
                                         if (res && res != 0) {
-                                            alert ("op");
-
+                                           //alert ("op");
+                                            updateData(undefined);
                                         }
 
                                     },
