@@ -77,10 +77,16 @@ class SiteController extends Controller
         {
             if (!empty($_POST['year']))
             {
+                $year = $_POST['year'];
                     switch ($_POST['year'])
                     {
                         case 2010:
-                        return json_encode("#ffff12");
+                            $query = "SELECT * FROM indicator_data INNER JOIN region ON region.id = indicator_data.RegionId WHERE YEAR = $year";
+                            $connection = Yii::$app->getDb();
+                            $command = $connection->createCommand($query);
+
+                            $result = $command->queryAll();
+                            return json_encode($result);
 
                         case 2011:
                             return json_encode("#ff1112");
@@ -98,7 +104,12 @@ class SiteController extends Controller
                             return json_encode("#afff12");
 
                         case 2016:
-                            return json_encode("#ff4512");
+                            $query = "SELECT * FROM indicator_data INNER JOIN region ON region.id = indicator_data.RegionId WHERE YEAR = $year";
+                            $connection = Yii::$app->getDb();
+                            $command = $connection->createCommand($query);
+
+                            $result = $command->queryAll();
+                            return json_encode($result);
 
                         case 2017:
                             return json_encode("#8ff992");

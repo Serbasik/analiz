@@ -68,7 +68,7 @@ function onRegionsLoaded(result) {
 
             var iso = feature.properties.iso3166;
             var name = feature.properties.name;
-            feature.properties.hintContent = name;
+            feature.properties.hintContent = iso;
 
             var dat = testData[iso];
 
@@ -84,7 +84,7 @@ function onRegionsLoaded(result) {
 
 function updateData(newData) {
     console.log(regions);
-
+//nhfvjklhkjghjkh
     regions.objects.each(function (feature) {
         console.log(feature);
         feature.options.fillColor = newData;

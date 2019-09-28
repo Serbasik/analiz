@@ -22,6 +22,14 @@
                             <?php endforeach;?>
                         </div>
                         <div id="map"></div>
+                        <p class="col-lg-3" style="margin-top: 15px">
+                            <input name="group1" type="radio" id="test1">
+                            <label for="test1">Детская смертность</label>
+                        </p>
+                        <p class="col-lg-2" style="margin-top: 15px">
+                            <input name="group1" type="radio" id="test2">
+                            <label for="test2">Рождаемость</label>
+                        </p>
                     </div>
                     <div class="card-content">
 
