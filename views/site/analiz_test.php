@@ -1,3 +1,5 @@
+<script src="/regions2.js" type="text/javascript"></script>
+<script src="/grad_color.js" type="text/javascript"></script>
 
 <div id="page-wrapper">
     <div class="header">

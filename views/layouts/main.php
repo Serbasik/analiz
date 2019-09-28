@@ -23,9 +23,7 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=58faebb9-d7fb-4008-9375-6d28701f97ea" type="text/javascript"></script>
     <script src="/data.js" type="text/javascript"></script>
-    <script src="/regions.js" type="text/javascript"></script>
     <script src="/js/jquery-1.10.2.js"></script>
-    <script src="/js/jquery-noconflict.js"></script>
     <script src="/js/easychem.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/easychem.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

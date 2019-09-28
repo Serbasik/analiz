@@ -1,3 +1,4 @@
+<script src="/regions.js" type="text/javascript"></script>
 
 <div id="page-wrapper" style="margin-left: 0px;">
     <div class="header">

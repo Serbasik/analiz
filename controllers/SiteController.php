@@ -85,6 +85,16 @@ class SiteController extends Controller
         }
     }
 
+    public function actionGetdataByPeriod()
+    {
+        if (Yii::$app->request->isAjax)
+        {
+            $data = Period::find()->asArray()->all();
+            return json_encode($data);
+        }
+    }
+
+
     public function actionTest()
     {
         $god = Period::find()->asArray()->all();
