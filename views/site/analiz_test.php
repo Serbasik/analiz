@@ -28,18 +28,17 @@
 
                         <div class="clearBoth"><br></div>
                         <script>
-                            updateData(undefined);
                             $('.btn').on('click', function () {
-
+                                var year = ($(this).attr('id'));
                                 $.ajax({
                                     url: '/site/getdata',
                                     type: 'POST',
+                                    data: {year: year},
                                     dataType: 'json',
                                     beforeSend: function(request) {
                                         return request.setRequestHeader('X-CSRF-Token', $("meta[name='csrf-token']").attr('content'));
                                     },
                                     success: function (res) {
-                                        console.log("SUUU")
                                         if (res && res != 0) {
                                            //alert ("op");
                                             updateData(undefined);

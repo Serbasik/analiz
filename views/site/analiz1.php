@@ -33,7 +33,7 @@
                                     url: '/site/getdata',
                                     type: 'POST',
                                     data: {year: year},
-                                    dataType: 'json',
+                                    //dataType: 'json',
                                     beforeSend: function(request) { return request.setRequestHeader('X-CSRF-Token', $("meta[name='csrf-token']").attr('content')); },
                                     success: function (res) {
                                         if (res && res != 0) {

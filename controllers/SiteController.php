@@ -83,6 +83,7 @@ class SiteController extends Controller
             }
 
         }
+        return "{}";
     }
 
     public function actionGetdataByPeriod()

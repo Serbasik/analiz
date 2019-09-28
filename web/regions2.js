@@ -72,18 +72,23 @@ function onRegionsLoaded(result) {
 
             var dat = testData[iso];
 
-            if (dat != undefined) {
+            if (dat) {
                 feature.options.fillColor = dat.val;
             }
 
             return feature;
         }));
     map.geoObjects.add(regions);
-
 }
 
 
 function updateData(newData) {
-    console.log(regions.objects);
+    console.log(regions);
 
+    regions.objects.each(function (feature) {
+        console.log(feature);
+        feature.options.fillColor = "#343433";
+    });
+    map.geoObjects.remove();
+    map.geoObjects.add(regions);
 }
