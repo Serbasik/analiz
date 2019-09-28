@@ -80,7 +80,7 @@ function onRegionsLoaded(result) {
         }));
     map.geoObjects.add(regions);
 }
-
+//!!!
 
 function updateData(newData) {
     console.log(regions);
