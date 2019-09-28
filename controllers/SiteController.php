@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\Period;
+use app\models\Templates;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -62,6 +64,26 @@ class SiteController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+    public function actionAnaliz1()
+    {
+        $god = Period::find()->asArray()->all();
+        return $this->render('analiz1', compact ('god'));
+    }
+    public function actionGetdata()
+    {
+        if (Yii::$app->request->isAjax)
+        {
+            $data = Period::find()->asArray()->all();
+            return json_encode($data);
+        }
+    }
+
+    public function actionTest()
+    {
+        $god = Period::find()->asArray()->all();
+        return $this->render('analiz_test', compact('god'));
     }
 
     /**

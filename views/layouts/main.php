@@ -259,7 +259,7 @@ AppAsset::register($this);
                     <a class="<?php if (Yii::$app->request->url == '/site/oge' || Yii::$app->request->url == '/site/ege'):?>active-menu <?php endif;?> waves-effect waves-dark" href="#"><i class="fa fa-dashboard"></i> Анализировать<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="/site/oge">Анализ 1</a>
+                            <a href="/site/analiz1">Анализ 1</a>
                         </li>
                         <li>
                             <a href="/site/ege">Анализ 2</a>
@@ -273,7 +273,7 @@ AppAsset::register($this);
                     <a href="/site/mypupils" class="<?php if (Yii::$app->request->url == '/site/mypupils'):?>active-menu <?php endif;?>waves-effect waves-dark"><i class="fa fa-bar-chart-o"></i> Настройки 2</a>
                 </li>
                 <li>
-                    <a href="tab-panel.html" class="waves-effect waves-dark"><i class="fa fa-qrcode"></i> Tabs & Panels</a>
+                    <a href="/site/test" class="waves-effect waves-dark"><i class="fa fa-qrcode"></i> Для теста</a>
                 </li>
 
                 <li>
