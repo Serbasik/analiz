@@ -1,23 +1,27 @@
-<?php
+<div id="page-wrapper">
+    <div class="header">
+        <h1 class="page-header">
+            Добро пожаловать в систему анализа!
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Empty</a></li>
+            <li class="active">Data</li>
+        </ol>
 
-/* @var $this yii\web\View */
-
-$this->title = 'Система анализа показателей детской смертности и рождаемости';
-?>
-    <div class="site-index">
-
-        <div class="jumbotron">
-            <h3>Добро пожаловать в систему анализа "Морталити"</h3>
-
-
-        </div>
-        <div id="map"></div>
-        <div class="body-content">
-
-            <div class="row">
-
-            </div>
-
-        </div>
     </div>
-<?php
+    <div id="page-inner">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-action">
+                        Для продолжения виберите вид анализа!
+                    </div>
+                    <div class="card-content">
+                        <p></p>
+                        <div class="clearBoth"><br></div>
+
+
+
