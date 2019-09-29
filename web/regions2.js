@@ -80,14 +80,46 @@ function onRegionsLoaded(result) {
         }));
     map.geoObjects.add(regions);
 }
-//!!!
+
 
 function updateData(newData) {
-    console.log(regions);
-//nhfvjklhkjghjkh
+
+    // var mapObj = new Map();
+    // $.each(newData, function(itm) {
+    //         console.log(itm.RegionId);
+    //         console.log(itm);
+    //     }
+    // );
+
+    var mp = newData.reduce(function(map, obj) {
+        map[obj.id] = obj;
+        return map;
+    }, {});
+
+    var color1 = '#ff1f1a';
+    var color2 = '#28ff48';
+
+
+    // #ff9999
+    // #ab4343
+    // #7a2424
+
+    //console.log("sssss");
     regions.objects.each(function (feature) {
-        console.log(feature);
-        feature.options.fillColor = newData;
+        var itm = mp[feature.id];
+        //console.log(itm.value);
+        if(!itm) {
+            feature.options.fillColor = '#555964'
+        } else {
+            var v = itm.value;
+
+            if(v>10) v = 10;
+
+            var gr  = gradColor(color1, color2, v / 10);
+            console.log(gr);
+            feature.options.fillColor = gradColor(color1, color2, v / 10);
+        }
+
     });
     map.geoObjects.remove();
     map.geoObjects.add(regions);
