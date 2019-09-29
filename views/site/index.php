@@ -1,7 +1,7 @@
 <div id="page-wrapper" style="margin-left: 0px;">
     <div class="header">
         <h1 class="page-header">
-            Добро пожаловать в систему анализа!
+            Добро пожаловать в систему!
         </h1>
 
     </div>
@@ -19,8 +19,8 @@
                             <div class="col-md-4 col-sm-4">
                                 <div class="card teal">
                                     <div class="card-content white-text">
-                                        <span class="card-title">Проект №1</span>
-                                        <p>Описание проекта №1</p>
+                                        <span class="card-title">Перинатальные центры</span>
+                                        <p>Изучение результатов запуска сети перинатальных центров</p>
                                     </div>
                                     <div class="card-action">
                                         <a href="/site/analiz1">Открыть</a>

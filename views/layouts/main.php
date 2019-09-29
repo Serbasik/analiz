@@ -63,7 +63,11 @@ AppAsset::register($this);
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand waves-effect waves-dark" href="/" style="font-size: 13px"><i class="large material-icons">insert_chart</i> <strong>Система анализа "Магма"</strong></a>
+            <a class="navbar-brand waves-effect waves-dark" href="/" style="font-size: 13px;padding: 0;background-color: #2f2f2f">
+            <!--    <i class="large material-icons">insert_chart</i> <strong>Система анализа "Магма"</strong>
+            -->
+                <img src="/img/logo.jpeg">
+            </a>
 
             <div id="sideNav" class="closed" href=""><i class="material-icons dp48">toc</i></div>
         </div>

@@ -57,7 +57,7 @@ function onRegionsLoaded(result) {
 
             var iso = feature.properties.iso3166;
             var name = feature.properties.name;
-            feature.properties.hintContent = iso;
+            feature.properties.hintContent = name;
 
            var dat;
 
@@ -94,32 +94,45 @@ function updateData(newData) {
     // );
 
     var mp = newData.reduce(function(map, obj) {
-        map[obj.id] = obj;
+        map[obj.RegionId] = obj;
         return map;
     }, {});
 
-
+    console.log(mp);
     //console.log("sssss");
     regions.objects.each(function (feature) {
         var itm = mp[feature.id];
         //console.log(itm.value);
+       //console.log(itm);
+
         if(!itm) {
             feature.options.fillColor = '#555964'
+            feature.properties.hintContent = feature.properties.name;
         } else {
             var v = itm.value;
             var c;
-            if(v >= 11) {
+            if(v >= 6.5) {
                 c = color3;
-            } else if(v >= 8.5) {
+            } else if(v >= 5.8) {
                 c = color2;
             } else {
                 c = color1;
             }
 
-
+//console.log(itm.info)
             //var gr  = gradColor(color1, color2, v / 10);
             //console.log(gr);
             feature.options.fillColor = c;
+
+            if(itm.info == null) {
+                feature.properties.hintContent = feature.properties.name;
+            } else {
+                if(itm.an == null ) {
+                    feature.properties.hintContent = itm.info;
+                } else {
+                    feature.properties.hintContent = itm.info +  "<br/>" + itm.an;
+                }
+            }
         }
 
     });
