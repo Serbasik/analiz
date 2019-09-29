@@ -26,7 +26,7 @@ function init() {
 
     map = new ymaps.Map('map', {
         center: [65, 100],
-        zoom: 2,
+        zoom: 3,
         type: null,
         controls: ['zoomControl']
     });
@@ -88,7 +88,7 @@ function onRegionsLoaded(result) {
 // var color2 = '#28ff48';
 
 
-var color1 = '#ff9999';
+var color1 = '#8c92a1';
 var color2 = '#ab4343';
 var color3 = '#7a2424';
 
@@ -121,12 +121,19 @@ function updateData(newData) {
             feature.options.fillColor = '#555964'
         } else {
             var v = itm.value;
+            var c;
+            if(v >= 11) {
+                c = color3;
+            } else if(v >= 8.5) {
+                c = color2;
+            } else {
+                c = color1;
+            }
 
-            if(v>10) v = 10;
 
-            var gr  = gradColor(color1, color2, v / 10);
-            console.log(gr);
-            feature.options.fillColor = gradColor(color1, color2, v / 10);
+            //var gr  = gradColor(color1, color2, v / 10);
+            //console.log(gr);
+            feature.options.fillColor = c;
         }
 
     });

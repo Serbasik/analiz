@@ -43,7 +43,7 @@ AppAsset::register($this);
     <style>
         #map {
             width: 100%;
-            height: 400px;
+            height: 650px;
             padding: 0;
             margin: 0;
         }
