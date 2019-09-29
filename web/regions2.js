@@ -1,18 +1,4 @@
-var testData = {
-    "RU-KHA" : {
-        id: "RU-KHA",
-        val: '#28ff48',
-        isOpened : true
-    },
-
-    "RU-YAN" :
-    {
-        id: "RU-YAN",
-        val: '#ff1f1a',
-        isOpened : true
-    }
-};
-
+var testData;
 var color_nodata = '#555964';
 
 
@@ -63,7 +49,7 @@ function onRegionsLoaded(result) {
             feature.options = {
                 strokeColor: '#ffffff',
                 strokeOpacity: 0.4,
-                fillColor: '#6961b0',
+                fillColor: '#d2d2d2',
                 fillOpacity: 0.8,
                 hintCloseTimeout: 0,
                 hintOpenTimeout: 0
@@ -73,7 +59,7 @@ function onRegionsLoaded(result) {
             var name = feature.properties.name;
             feature.properties.hintContent = iso;
 
-            var dat = testData[iso];
+           var dat;
 
             if (dat) {
                 feature.options.fillColor = dat.val;

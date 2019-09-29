@@ -1,7 +1,6 @@
-<script src="/regions2.js" type="text/javascript"></script>
-<script src="/grad_color.js" type="text/javascript"></script>
+<script src="/regions.js" type="text/javascript"></script>
 
-<div id="page-wrapper">
+<div id="page-wrapper" style="margin-left: 0px;">
     <div class="header">
         <h1 class="page-header">
             Анализ данных №1
@@ -22,14 +21,6 @@
                             <?php endforeach;?>
                         </div>
                         <div id="map"></div>
-                        <p class="col-lg-3" style="margin-top: 15px">
-                            <input name="group1" type="radio" id="test1">
-                            <label for="test1">Детская смертность</label>
-                        </p>
-                        <p class="col-lg-2" style="margin-top: 15px">
-                            <input name="group1" type="radio" id="test2">
-                            <label for="test2">Рождаемость</label>
-                        </p>
                     </div>
                     <div class="card-content">
 
@@ -38,19 +29,16 @@
                         <script>
                             $('.btn').on('click', function () {
                                 var year = ($(this).attr('id'));
-
                                 $.ajax({
                                     url: '/site/getdata',
                                     type: 'POST',
                                     data: {year: year},
-                                    dataType: 'json',
-                                    beforeSend: function(request) {
-                                        return request.setRequestHeader('X-CSRF-Token', $("meta[name='csrf-token']").attr('content'));
-                                    },
+                                    //dataType: 'json',
+                                    beforeSend: function(request) { return request.setRequestHeader('X-CSRF-Token', $("meta[name='csrf-token']").attr('content')); },
                                     success: function (res) {
                                         if (res && res != 0) {
-                                           //alert ("op");
-                                            updateData(res);
+                                            alert (year);
+
                                         }
 
                                     },

@@ -66,7 +66,7 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
-    public function actionAnaliz1()
+    public function actionAnaliz1__()
     {
         $god = Period::find()->asArray()->all();
         return $this->render('analiz1', compact ('god'));
@@ -102,10 +102,16 @@ class SiteController extends Controller
     }
 
 
-    public function actionTest()
+    public function actionAnaliz1()
     {
-        $god = Period::find()->asArray()->all();
-        return $this->render('analiz_test', compact('god'));
+        $query = "select p.id as year, case when exists(SELECT id FROM analiz_db.indicator_data ind where ind.year = p.id) then 1 else 0 end as dataExists
+from analiz_db.period p";
+        $connection = Yii::$app->getDb();
+        $command = $connection->createCommand($query);
+
+        $result = $command->queryAll();
+        //$god = Period::find()->asArray()->all();
+        return $this->render('analiz1', compact('result'));
     }
 
     /**
