@@ -13,6 +13,9 @@ var testData = {
     }
 };
 
+var color_nodata = '#555964';
+
+
 var regions = undefined;
 var map = undefined;
 
@@ -81,6 +84,19 @@ function onRegionsLoaded(result) {
     map.geoObjects.add(regions);
 }
 
+// var color1 = '#ff1f1a';
+// var color2 = '#28ff48';
+
+
+var color1 = '#ff9999';
+var color2 = '#ab4343';
+var color3 = '#7a2424';
+
+// #ff9999
+// #ab4343
+// #7a2424
+
+
 
 function updateData(newData) {
 
@@ -96,13 +112,6 @@ function updateData(newData) {
         return map;
     }, {});
 
-    var color1 = '#ff1f1a';
-    var color2 = '#28ff48';
-
-
-    // #ff9999
-    // #ab4343
-    // #7a2424
 
     //console.log("sssss");
     regions.objects.each(function (feature) {
